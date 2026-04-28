@@ -47,11 +47,11 @@
 
 // One job instance of a periodic task
 struct Job {
-    std::string task_name;   // Release time (k * T)
-    double arrival;   // Absolute deadline (arrival + D); may be INT_MAX for tau5 in Schedule 2
-    double deadline;   // Worst-case execution time (C_i)
-    double wcet;   // Time at which the job starts executing
-    double start   = -1;   // Time at which the job starts
+    std::string task_name;
+    double arrival;   // Release time (k * T)
+    double deadline;   // Absolute deadline (arrival + D); may be INT_MAX for tau5 in Schedule 2
+    double wcet;   // Worst-case execution time (C_i)
+    double start   = -1;   // Time at which the job starts executing
     double finish  = -1;   // Time at which the job finishes (start + wcet)
     double waiting = 0;   // start − arrival
     bool   missed  = false;   // True if finish > real deadline
