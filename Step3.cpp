@@ -51,7 +51,7 @@ struct Job {
     double arrival;   // Absolute deadline (arrival + D); may be INT_MAX for tau5 in Schedule 2
     double deadline;   // Worst-case execution time (C_i)
     double wcet;   // Time at which the job starts executing
-    double start   = -1;   // Time at which the job finishes (start + wcet)
+    double start   = -1;   // Time at which the job starts
     double finish  = -1;   // Time at which the job finishes (start + wcet)
     double waiting = 0;   // start − arrival
     bool   missed  = false;   // True if finish > real deadline
